@@ -45,7 +45,12 @@ const LoginForm = () => {
 
       <button type="submit">Submit</button>
 
-      {message && <p>{message}</p>}
+      {message && (
+  <p style={{ marginTop: "20px", color: message.includes("Welcome") ? "green" : "red", fontWeight: "bold" }}>
+    {message}
+  </p>
+)}
+
     </form>
   );
 };
