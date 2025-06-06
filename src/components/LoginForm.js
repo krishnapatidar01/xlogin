@@ -21,7 +21,11 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      
       <div>
+        <h1>Login Page</h1>
+        {message && <p>{message}</p>}
+        
         <label htmlFor="username">Username</label>
         <input
           id="username"
@@ -45,7 +49,7 @@ const LoginForm = () => {
 
       <button type="submit">Submit</button>
 
-      {message && <p>{message}</p>}
+    
     </form>
   );
 };
