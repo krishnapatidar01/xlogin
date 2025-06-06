@@ -9,7 +9,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     if (!username || !password) {
-      return; // Don't show any message if fields are empty
+      return;
     }
 
     if (username === "user" && password === "password") {
@@ -22,7 +22,7 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="username">Username</label><br />
+        <label htmlFor="username">Username</label>
         <input
           id="username"
           type="text"
@@ -33,7 +33,7 @@ const LoginForm = () => {
       </div>
 
       <div>
-        <label htmlFor="password">Password</label><br />
+        <label htmlFor="password">Password</label>
         <input
           id="password"
           type="password"
@@ -45,12 +45,7 @@ const LoginForm = () => {
 
       <button type="submit">Submit</button>
 
-      {message && (
-  <p style={{ marginTop: "20px", color: message.includes("Welcome") ? "green" : "red", fontWeight: "bold" }}>
-    {message}
-  </p>
-)}
-
+      {message && <p>{message}</p>}
     </form>
   );
 };
